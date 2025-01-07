@@ -6,7 +6,6 @@
     <title>Just Out</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="./style.css">
     <style>
         body {
             margin: 0;
@@ -19,6 +18,8 @@
             min-height: 100vh;
         }
 
+        
+
         .bg_img {
             position: absolute;
             top: 0;
@@ -29,45 +30,25 @@
             z-index: -1;
         }
 
-        .content-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            z-index: 1;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-        }
-
-        nav a {
+        .header-just {
+            font-size: 3rem;
             color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 50px;
-        }
-
-        nav a:hover {
-            color: #1DA1F2;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         .icon-container {
+            margin: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 30px;
+            gap: 20px;
         }
 
         .icon-i {
-            font-size: 80px;
+            font-size: 3rem;
             color: white;
+            transition: color 0.3s ease;
         }
 
         .icon-i:hover {
@@ -75,80 +56,77 @@
         }
 
         .just-img {
-            width: 300px;
+            max-width: 40%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
         }
-
-        /* Responsive Design */
-
-        @media (max-width: 1440px) {
-            nav a {
-                font-size: 40px;
-            }
-
-            .icon-i {
-                font-size: 60px;
-            }
-
-            .just-img {
-                width: 250px;
-            }
+        .just-img-div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         @media (max-width: 1024px) {
-            nav a {
-                font-size: 35px;
+            .header-just {
+                font-size: 2.5rem;
             }
 
             .icon-i {
-                font-size: 50px;
+                font-size: 2.5rem;
             }
 
             .just-img {
-                width: 200px;
+                max-width: 35%;
             }
         }
 
         @media (max-width: 768px) {
-            nav a {
-                font-size: 30px;
+            .header-just {
+                font-size: 2rem;
             }
 
             .icon-i {
-                font-size: 40px;
+                font-size: 2rem;
             }
 
             .just-img {
-                width: 180px;
+                max-width: 50%;
             }
         }
 
         @media (max-width: 375px) {
-            nav a {
-                font-size: 25px;
+            .header-just {
+                font-size: 1.5rem;
             }
 
             .icon-i {
-                font-size: 30px;
+                font-size: 1.5rem;
             }
 
             .just-img {
-                width: 150px;
+                max-width: 45%;
             }
         }
     </style>
 </head>
 <body>
-    <img src="/asset/img/parliment.JPG" alt="Parliament" class="bg_img">
-    <div class="content-container">
-        <nav>
-            <a href="https://telegram.org" target="_blank" title="Telegram" class="icon-i">
-                <i class="fab fa-telegram"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" title="Twitter" class="icon-i">
-                <i class="fab fa-twitter"></i>
-            </a>
-        </nav>
+    <h1 class="header-just">$JUSTOUT</h1>
+
+    <div class="icon-container">
+        <a href="https://telegram.org" target="_blank" title="Telegram" class="icon-i">
+            <i class="fab fa-telegram"></i>
+        </a>
+
+    <div class="just-img-div">
         <img src="./asset/img/Blues Art.jpeg" alt="Blues Art" class="just-img">
     </div>
+        <a href="https://twitter.com" target="_blank" title="Twitter" class="icon-i">
+            <i class="fab fa-twitter"></i>
+        </a>
+    </div>
+
+
+    <img src="/asset/img/parliment.JPG" alt="Parliament" class="bg_img">
 </body>
 </html>

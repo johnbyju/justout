@@ -22,7 +22,7 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        
+        padding-top: 50px;
       }
 
       .bg_img {
@@ -93,6 +93,7 @@
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         padding: 0px 15px;
+
       }
 
       .text {
@@ -116,8 +117,51 @@
         border-image-outset: 0;
       }
 
-       
+      .container {
+        position: relative;
+        min-height: calc(100vh - 4rem);
+        background-color: white;
+        border: 20px solid #2563eb;
+        background-clip: padding-box;
+      }
+      .border-text {
+        position: absolute;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        background: #2563eb;
+        padding: 5px 15px;
+        white-space: nowrap;
+      }
+      .top,
+      .bottom {
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+      }
+      .top {
+        top: 10px;
+      }
+      .bottom {
+        bottom: -160px;
+        overflow-x: hidden;
+      }
+      
+     
+    
+      .scrolling-text {
+        display: inline-block;
+        animation: scroll 80s linear infinite;
+      }
 
+      @keyframes scroll {
+        0% {
+          transform: translateX(10);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
 
       @media (max-width: 1024px) {
         .header-just {
@@ -125,7 +169,7 @@
         }
 
         .icon-i {
-          font-size: 2.5rem;
+          font-size: 6rem !important;
         }
         .just-img {
           max-width: 55%;
@@ -138,7 +182,7 @@
         }
 
         .icon-i {
-          font-size: 2rem;
+          font-size: 4rem !important;
         }
 
         .just-img {
@@ -152,7 +196,7 @@
         }
 
         .icon-i {
-          font-size: 1.5rem;
+          font-size: 2rem !important;
         }
         .just-img {
           max-width: 40%;
@@ -167,6 +211,44 @@
     </style>
   </head>
   <body class="border-img">
+    <div class="scroll-content">
+      <div class="border-text top">
+        <div class="scrolling-text">
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+        </div>
+      
+      </div>
+      <div class="border-text bottom">
+        <div class="scrolling-text">
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+          $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
+        </div>
+      </div>
+    </div>
+
     <div class="header-div">
       <h1 class="header-just">
         <span class="text">$ JUSTOUT</span>
@@ -224,3 +306,4 @@
     <img src="/asset/img/parliment.JPG" alt="Parliament" class="bg_img" />
   </body>
 </html>
+

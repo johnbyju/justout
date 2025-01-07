@@ -13,6 +13,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
     />
     <style>
+      html {
+        overflow-x: hidden !important;
+      }
       body {
         margin: 0;
         padding: 0;
@@ -93,12 +96,11 @@
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         padding: 0px 15px;
-
       }
 
       .text {
         -webkit-text-stroke-width: 3px;
-        /* -webkit-text-stroke-color: rgb(255, 255, 255); */
+        -webkit-text-stroke-color: #807787; /* Black stroke */
         letter-spacing: 5px;
       }
 
@@ -146,9 +148,7 @@
         bottom: -160px;
         overflow-x: hidden;
       }
-      
-     
-    
+
       .scrolling-text {
         display: inline-block;
         animation: scroll 60s linear infinite;
@@ -156,7 +156,7 @@
 
       @keyframes scroll {
         0% {
-          transform: translateX(10);
+          transform: translateX(0);
         }
         100% {
           transform: translateX(-100%);
@@ -186,7 +186,12 @@
         }
 
         .just-img {
-          max-width: 50%;
+          max-width: 70%;
+        }
+      }
+      @media (max-width: 550px) {
+        .just-img {
+          max-width: 60%;
         }
       }
 
@@ -228,7 +233,6 @@
           $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
           $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT $JUSTOUT
         </div>
-      
       </div>
       <div class="border-text bottom">
         <div class="scrolling-text">
@@ -306,4 +310,3 @@
     <img src="/asset/img/parliment.JPG" alt="Parliament" class="bg_img" />
   </body>
 </html>
-

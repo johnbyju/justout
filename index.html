@@ -22,6 +22,9 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
+        border: 10px solid transparent;
+        border-image: url(/asset/img/border.png) ;
+        border-image-repeat: repeat;
       }
 
       .bg_img {
@@ -32,6 +35,7 @@
         height: 100%;
         object-fit: cover;
         z-index: -1;
+        filter: grayscale(1);
       }
 
       .header-just {
@@ -82,18 +86,40 @@
         background-clip: text;
       }
 
-      
-
-      .header-div{
+      .header-div {
         position: relative;
         display: flex;
         justify-content: center;
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(255, 251, 251, 0.3);
         backdrop-filter: blur(10px);
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 10px;
+        padding: 0px 15px;
       }
+
+      .text {
+        -webkit-text-stroke-width: 3px;
+        /* -webkit-text-stroke-color: rgb(255, 255, 255); */
+        letter-spacing: 5px;
+      }
+
+      .justout-border {
+        border: 5px solid transparent;
+        border-image: url("/asset/img/border.png") 30 round;
+        border-image-repeat: repeat;
+        padding: 20px;
+      }
+      /* Alternative using multiple borders */
+      .justout-border-alt {
+        border: 5px solid transparent;
+        border-image: url("/asset/img/border.png") 30 stretch;
+        border-image-slice: 30 fill;
+        border-image-width: 5px;
+        border-image-outset: 0;
+      }
+
+       
+
 
       @media (max-width: 1024px) {
         .header-just {
@@ -104,7 +130,7 @@
           font-size: 2.5rem;
         }
         .just-img {
-          max-width: 40%;
+          max-width: 55%;
         }
       }
 
@@ -118,7 +144,7 @@
         }
 
         .just-img {
-          max-width: 35%;
+          max-width: 50%;
         }
       }
 
@@ -131,21 +157,21 @@
           font-size: 1.5rem;
         }
         .just-img {
-          max-width: 50%;
+          max-width: 40%;
         }
       }
 
       @media (min-width: 1440px) {
-        /* .just-img{
-                max-width: %;   
-            } */
+        .just-img {
+          max-width: 56%;
+        }
       }
     </style>
   </head>
-  <body>
+  <body class="border-img">
     <div class="header-div">
       <h1 class="header-just">
-        <span class="text">$JUSTOUT</span>
+        <span class="text">$ JUSTOUT</span>
       </h1>
     </div>
 

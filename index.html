@@ -154,6 +154,44 @@
         animation: scroll 60s linear infinite;
       }
 
+      .CA {
+        display: flex; 
+        align-items: center; 
+        gap: 10px; 
+        color: #FFD65A; 
+        background-color: #16C47F;
+        padding: 0px 10px;
+        margin-top: 5px;
+        border-radius: 20px;
+      }
+
+      .CA h1 {
+        font-size: 2rem;
+        padding-top: 22px;
+      }
+
+      .CA h2 {
+        font-size: 2rem;
+        margin: 0;
+        white-space: nowrap; 
+      }
+      button {
+        margin-top: 17px;
+        padding: 5px 10px;
+        font-size: 15px;
+        cursor: pointer;
+        border: none;
+        background-color: #d32f2f;
+        color: white;
+        border-radius: 10px;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+
+      button:hover {
+        background-color: #b71c1c;
+        transform: scale(1.05);
+      }
+
       @keyframes scroll {
         0% {
           transform: translateX(0);
@@ -213,6 +251,91 @@
           max-width: 56%;
         }
       }
+
+
+      /* time line style */
+
+
+      .timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: yellow;
+            margin-bottom: 40px;
+        }
+        .timeline-container {
+            position: relative;
+            padding: 20px 0;
+            margin-top: 100px;
+        }
+        
+        .timeline-points {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+        .point {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 140px;
+            text-align: center;
+            position: relative;
+        }
+        .point:nth-child(odd) {
+            margin-top: -80px;
+        }
+        .point:nth-child(even) {
+            margin-top: 80px;
+        }
+        .dot {
+            width: 20px;
+            height: 20px;
+            background: #D52B1E;
+            border-radius: 50%;
+            margin: 10px 0;
+            border: 4px solid #1E3D7B;
+            box-sizing: content-box;
+        }
+        .year {
+            font-weight: bold;
+            margin: 5px 0;
+            font-size: 2em;
+            color: white;
+        }
+        .desc {
+            font-size: 1.7 rem;
+            color: white;
+            line-height: 1.4;
+            padding: 0 5px;
+        }
+        .line-dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #D52B1E;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .line-dots {
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @media (max-width: 768px) {
+            .timeline {
+                padding: 10px;
+            }
+            .point {
+                width: 120px;
+            }
+        }
     </style>
   </head>
   <body class="border-img">
@@ -259,9 +382,17 @@
       </h1>
     </div>
 
+    <div class="CA">
+      <h1>CA :</h1>
+      <h2 id="content-to-copy">oirjroierg[oewhrgiw4g[grijhegro403[4903</h2>
+    </div>
+    <button id="copy-button">
+      <h2>Copy to Clipboard</h2>
+    </button>
+
     <div class="icon-container">
       <a
-        href="https://telegram.org"
+        href="https://t.me/justoutcto"
         target="_blank"
         title="Telegram"
         class="icon-i"
@@ -277,7 +408,7 @@
         />
       </div>
       <a
-        href="https://twitter.com"
+        href="https://x.com/justoutmeme"
         target="_blank"
         title="Twitter"
         class="icon-i"
@@ -301,12 +432,79 @@
       </a>
     </div>
 
-    <div>
-      <a target="_blank" href="https://marmafintech.vercel.app"
-        ><h2>oirjroierg[oewhrgiw4g[grijhegro403[4903</h2></a
-      >
+
+
+    <!-- the time line part  -->
+
+
+    <div class="timeline">
+        <h1>Justin Trudeau's Career Timeline</h1>
+        <div class="timeline-container">
+            
+            <div class="timeline-points">
+                <div class="point">
+                    <div class="dot"></div>
+                    <div class="year">1971</div>
+                    <div class="desc">Born in Ottawa, ON</div>
+                </div>
+                <div class="point">
+                    <div class="dot"></div>
+                    <div class="year">1994-1998</div>
+                    <div class="desc">McGill University B.A.</div>
+                </div>
+                <div class="point">
+                    <div class="dot"></div>
+                    <div class="year">1998-2002</div>
+                    <div class="desc">Teacher in Vancouver</div>
+                </div>
+                <div class="point">
+                    <div class="dot"></div>
+                    <div class="year">2008</div>
+                    <div class="desc">Elected MP for Papineau</div>
+                </div>
+                <div class="point">
+                    <div class="dot"></div>
+                    <div class="year">2013</div>
+                    <div class="desc">Liberal Party Leader</div>
+                </div>
+                <div class="point">
+                    <div class="dot"></div>
+                    <div class="year">2015</div>
+                    <div class="desc">Becomes 23rd Prime Minister</div>
+                </div>
+                <div class="point">
+                    <div class="dot"></div>
+                    <div class="year">2024</div>
+                    <div class="desc">Announced Resignation</div>
+                </div>
+            </div>
+        </div>
     </div>
 
+0
     <img src="/asset/img/parliment.JPG" alt="Parliament" class="bg_img" />
+
+    <script>
+      const copyButton = document.getElementById("copy-button");
+      const contentToCopy = document.getElementById("content-to-copy");
+
+      copyButton.addEventListener("click", () => {
+        const tempTextArea = document.createElement("textarea");
+        tempTextArea.value = contentToCopy.innerText;
+        document.body.appendChild(tempTextArea);
+        tempTextArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextArea);
+
+        alert("Content copied to clipboard!");
+      });
+    </script>
   </body>
 </html>
+
+
+
+
+
+
+

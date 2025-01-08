@@ -145,7 +145,7 @@
         top: 10px;
       }
       .bottom {
-        bottom: -600px;
+        bottom: -850px;
         overflow-x: hidden;
       }
 
@@ -257,85 +257,129 @@
 
 
       .timeline {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            color: yellow;
-            margin-bottom: 40px;
-        }
-        .timeline-container {
-            position: relative;
-            padding: 20px 0;
-            margin-top: 100px;
-        }
-        
-        .timeline-points {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-        }
-        .point {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 140px;
-            text-align: center;
-            position: relative;
-        }
-        .point:nth-child(odd) {
-            margin-top: -80px;
-        }
-        .point:nth-child(even) {
-            margin-top: 80px;
-        }
-        .dot {
-            width: 20px;
-            height: 20px;
-            background: #D52B1E;
-            border-radius: 50%;
-            margin: 10px 0;
-            border: 4px solid #1E3D7B;
-            box-sizing: content-box;
-        }
-        .year {
-            font-weight: bold;
-            margin: 5px 0;
-            font-size: 2em;
-            color: white;
-        }
-        .desc {
-            font-size: 1.7 rem;
-            color: white;
-            line-height: 1.4;
-            padding: 0 5px;
-        }
-        .line-dot {
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            background: #D52B1E;
-            border-radius: 50%;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        .line-dots {
-            position: absolute;
-            width: 100%;
-            height: 4px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        @media (max-width: 768px) {
-            .timeline {
-                padding: 10px;
-            }
-            .point {
-                width: 120px;
-            }
-        }
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  color: yellow;
+  margin-bottom: 40px;
+}
+.timeline-container {
+  position: relative;
+  padding: 20px 0;
+  margin-top: 100px;
+}
+
+.timeline-points {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap; /* Allows the points to wrap on smaller screens */
+  gap: 20px; /* Adds spacing between wrapped items */
+}
+
+.point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 140px;
+  text-align: center;
+  position: relative;
+}
+
+.point:nth-child(odd) {
+  margin-top: -80px;
+}
+
+.point:nth-child(even) {
+  margin-top: 80px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background: #d52b1e;
+  border-radius: 50%;
+  margin: 10px 0;
+  border: 4px solid #1e3d7b;
+  box-sizing: content-box;
+}
+
+.year {
+  font-weight: bold;
+  margin: 5px 0;
+  font-size: 2em;
+  color: white;
+}
+
+.desc {
+  font-size: 1.2rem; /* Adjusted font size for better readability */
+  color: white;
+  line-height: 1.4;
+  padding: 0 5px;
+}
+
+.line-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #d52b1e;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.line-dots {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .timeline-points {
+    flex-direction: column; /* Stack points vertically */
+    align-items: center;
+  }
+
+  .point {
+    width: auto; /* Allow points to take full width */
+    margin-top: 20px;
+  }
+
+  .point:nth-child(odd),
+  .point:nth-child(even) {
+    margin-top: 0; /* Remove offset for odd/even items */
+  }
+
+  .year {
+    font-size: 1.5em; /* Smaller font size for smaller screens */
+  }
+
+  .desc {
+    font-size: 1rem; /* Adjusted font size for better readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline {
+    padding: 10px;
+  }
+
+  .year {
+    font-size: 1.2em; /* Further reduce font size */
+  }
+
+  .desc {
+    font-size: 0.9rem;
+    line-height: 1.2;
+  }
+}
+
     </style>
   </head>
   <body class="border-img">
